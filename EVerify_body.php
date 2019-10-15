@@ -298,7 +298,7 @@ class EVerify
 		if($total != 0) {
 			$verified = ($verified / $total) * 100;
 		} else {
-			$verified = 0;
+			$verified = 100;
 		}
 
 		// Grab CSS styles based on verification percentage
