@@ -59,8 +59,12 @@ class EVerify
 		$parser->getOutput()->setProperty( 'Verified',   $verified );
 		$parser->getOutput()->setProperty( 'Unverified', $unverified );
 
-		$parser->getOutput()->setProperty( 'Verification Disabled', $specialFlags['verificationDisabled'] );
-		$parser->getOutput()->setProperty( 'Fully Verified', $specialFlags['fullyVerified'] );
+		if(isset($specialFlags['verificationDisabled'])) {
+			$parser->getOutput()->setProperty( 'Verification Disabled', $specialFlags['verificationDisabled'] );
+		}
+		if(isset($specialFlags['fullyVerified'])) {
+			$parser->getOutput()->setProperty( 'Fully Verified', $specialFlags['fullyVerified'] );
+		}
 	}
 
 	/**
