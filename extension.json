@@ -1,0 +1,19 @@
+{
+	"name": "EVerify",
+	"version": "1.0.0",
+	"author": [
+		"[[User:Brad|Brad]]"
+	],
+	"url": "https://github.com/atitd-community/mediawiki-everify",
+	"descriptionmsg": "Verification system for information from previous Wikis",
+	"type": "atitd",
+	"AutoloadClasses": {
+		"EVerify": "EVerify_body.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "EVerify::onParserFirstCallInit",
+		"ParserAfterTidy": "EVerify::onParserAfterTidy",
+		"BeforePageDisplay": "EVerify::onBeforePageDisplay"
+	},
+	"manifest_version": 1
+}
