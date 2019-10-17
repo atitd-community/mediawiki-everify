@@ -284,13 +284,19 @@ class EVerify
 	 * @return string
 	 */
 	public static function buildVerificationBox($title, $verified, $unverified, $specialFlags) {
-		// If the page doesn't exist, or isn't in the main namespace,
-		// has verification explicity disabled, or no verification
-		// tags are being used, don't show the verification box
+		// If the page doesn't exist, or isn't in the main namespace, or has
+		// verification explicity disabled, don't show a verification box
 		if( !$title->exists() ||
 			!$title->inNamespaces([0]) ||
-			$specialFlags['verificationDisabled'] ||
-			($verified + $unverified) == 0)
+			$specialFlags['verificationDisabled'] )
+		{
+			return '';
+		}
+
+		// If the page doesn't contain any verification
+		// tags, we do not show the verification box
+		if( ($verified + $unverified) == 0 &&
+			$specialFlags['fullyVerified'] == false )
 		{
 			return '';
 		}
