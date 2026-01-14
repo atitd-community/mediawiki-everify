@@ -303,7 +303,7 @@ class EVerify
 
 		// Create a specially formatted box if flagged as fully verified
 		if($specialFlags['fullyVerified']) {
-			$verificationBox = '<div class="verification verfified-full"><a href="https://atitd.wiki/tale9/Project:Verification"><strong>&#10003;</strong> Fully Verified!</a></div>';
+			$verificationBox = '<div class="verification verfified-full"><a href="https://atitd.wiki/tale11/Project:Verification"><strong>&#10003;</strong> Fully Verified!</a></div>';
 
 			return $verificationBox;
 		}
@@ -320,7 +320,7 @@ class EVerify
 		$styles = self::getVerificationStyles($verified);
 
 		// Build the box
-		$verificationBox = '<div class="verification '.$styles.'"><a href="https://atitd.wiki/tale9/Project:Verification"><strong>&#10003;</strong> '.number_format($verified).'% Verified</a></div>';
+		$verificationBox = '<div class="verification '.$styles.'"><a href="https://atitd.wiki/tale11/Project:Verification"><strong>&#10003;</strong> '.number_format($verified).'% Verified</a></div>';
 
 		return $verificationBox;
 	}
